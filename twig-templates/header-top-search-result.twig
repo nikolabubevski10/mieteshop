@@ -1,0 +1,154 @@
+<div class="header-top-search-result-group-list">    
+    {% if child_cat_list %}
+        <div class="header-top-search-cat">
+            <div class="header-top-search-cat-title">
+                <h3>ΘΕΜΑΤΙΚΕΣ</h3>
+            </div>
+            {% for items in child_cat_list %}
+                <div class="header-top-search-cat-item">
+                    {% for item in items %}
+                        <span><a href="{{ item.url }}">{{ item.title }}</a></span>
+                    {% endfor %}
+                </div>
+            {% endfor %}
+            {% if child_cat_list_count > 4 %}
+                <div class="header-top-search-result-link">
+                    <a href="{{ site_url }}?s={{ search_key }}&search_type=product-category">Όλες οι σχετικές θεματικές</a>
+                </div>
+            {% endif %}
+        </div>
+    {% endif %}
+    {% if publisher_list %}
+        <div class="header-top-search-post">
+            <div class="header-top-search-post-title">
+                <h3>ΕΚΔΟΤΗΣ</h3>
+            </div>
+            {% for item in publisher_list %}
+                <div class="header-top-search-post-item">
+                    <a href="{{ item.url }}">{{ item.title }}</a>
+                </div>
+            {% endfor %}
+            {% if publisher_list_count > 4 %}
+                <div class="header-top-search-result-link">
+                    <a href="{{ site_url }}?s={{ search_key }}&search_type=publisher">Όλοι οι σχετικοί εκδότες</a>
+                </div>
+            {% endif %}
+        </div>
+    {% endif %}
+    {% if contributor_list %}
+        <div class="header-top-search-post">
+            <div class="header-top-search-post-title">
+                <h3>ΣΥΝΤΕΛΕΣΤΈΣ</h3>
+            </div>
+            {% for item in contributor_list %}
+                <div class="header-top-search-post-item">
+                    <a href="{{ item.url }}">{{ item.title }}</a>
+                </div>
+            {% endfor %}
+            {% if contributor_list_count > 4 %}
+                <div class="header-top-search-result-link">
+                    <a href="{{ site_url }}?s={{ search_key }}&search_type=contributor">Όλοι οι σχετικοί συντελεστές</a>
+                </div>
+            {% endif %}
+        </div>
+    {% endif %}
+    {% if product_book_list %}
+        <div class="header-top-search-result-group">
+            <div class="header-top-search-result-group-title">
+                <h3>ΒΙΒΛΙΑ</h3>
+            </div>
+            {% for item in product_book_list %}
+                <div class="header-top-search-result-item">
+                    <div class="header-top-search-result-item-row">
+                        <div class="header-top-search-result-item-left-col">
+                            <div class="header-top-search-result-item-image">
+                                <a href="{{ item.url }}">
+                                    <img
+                                        class="lazyload"
+                                        src="{{ item.placeholder }}"
+                                        data-src="{{ item.imageurl }}"
+                                        alt="{{ item.title }}">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="header-top-search-result-item-right-col">
+                            <div class="header-top-search-result-item-info">
+                                {% if item.authors %}
+                                    <div class="header-top-search-result-item-info-author">
+                                    {% if item.authors|length > 3 %}
+                                        <div>Συλλογικό Έργο</div>
+                                    {% else %}
+                                        {% for author in item.authors %}
+                                            <div><a href="{{ author.url }}">{{ author.title }}</a></div>
+                                        {% endfor %}
+                                    {% endif %}
+                                    </div>
+                                {% endif %}
+                                <div class="header-top-search-result-item-info-title">
+                                    <h4><a href="{{ item.url }}">{{ item.title }}</a></h4>
+                                </div>
+                                <div class="header-top-search-result-item-info-book-cover-type">( {{ item.book_cover_type }} )</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>    
+            {% endfor %}
+            {% if product_book_list_count > 4 %}
+                <div class="header-top-search-result-link">
+                    <a href="{{ site_url }}?s={{ search_key }}&search_type=book">Όλα τα σχετικά προϊόντα</a>
+                </div>
+            {% endif %}
+        </div>
+    {% endif %}
+    {% if product_art_object_list %}
+        <div class="header-top-search-result-group">
+            <div class="header-top-search-result-group-title">
+                <h3>ΑΝΤΙΚΕΙΜΕΝΑ</h3>
+            </div>
+            {% for item in product_art_object_list %}
+                <div class="header-top-search-result-item">
+                    <div class="header-top-search-result-item-row">
+                        <div class="header-top-search-result-item-left-col">
+                            <div class="header-top-search-result-item-image">
+                                <a href="{{ item.url }}">
+                                    <img
+                                        class="lazyload"
+                                        src="{{ item.placeholder }}"
+                                        data-src="{{ item.imageurl }}"
+                                        alt="{{ item.title }}">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="header-top-search-result-item-right-col">
+                            <div class="header-top-search-result-item-info">
+                                {% if item.authors %}
+                                    <div class="header-top-search-result-item-info-author">
+                                    {% if item.authors|length > 3 %}
+                                        <div>Συλλογικό Έργο</div>
+                                    {% else %}
+                                        {% for author in item.authors %}
+                                            <div><a href="{{ author.url }}">{{ author.title }}</a></div>
+                                        {% endfor %}
+                                    {% endif %}
+                                    </div>
+                                {% endif %}
+                                <div class="header-top-search-result-item-info-title">
+                                    <h4><a href="{{ item.url }}">{{ item.title }}</a></h4>
+                                </div>
+                                <div class="header-top-search-result-item-info-book-cover-type">( {{ item.book_cover_type }} )</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>    
+            {% endfor %}
+            {% if product_art_object_list_count > 4 %}
+                <div class="header-top-search-result-link">
+                    <a href="{{ site_url }}?s={{ search_key }}&search_type=art-object">Όλα τα σχετικά προϊόντα</a>
+                </div>
+            {% endif %}
+        </div>
+    {% endif %}
+</div>
+<div class="header-top-search-button">
+    <a href="{{ site_url }}?s={{ search_key }}">όλα τα αποτελέσματα</a>
+</div>

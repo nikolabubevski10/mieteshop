@@ -1,0 +1,60 @@
+<div id="js-header-top-cart-list">
+    <div class="header-top-search-result-group-list">
+        <div class="header-top-search-result-group header-top-search-result-group--busket">
+            <div class="header-top-search-result-group-title">
+                <h3>ΚΑΛΑΘΙ ΑΓΟΡΩΝ</h3>
+            </div>
+            {% for item in cart_list %}
+                <div class="header-top-search-result-item">
+                    <div class="header-top-search-result-item-row">
+                        <div class="header-top-search-result-item-left-col">
+                            <div class="header-top-search-result-item-image">
+                                <img
+                                    class="lazyload"
+                                    src="{{ item.placeholder }}"
+                                    data-src="{{ item.image }}"
+                                    alt="{{ item.title }}">
+                            </div>
+                        </div>
+                        <div class="header-top-search-result-item-right-col">
+                            <div class="header-top-search-result-item-info-row">
+                                <div class="header-top-search-result-item-info col1">
+                                    {% if item.authors is iterable %}
+                                        {% for author in item.authors %}
+                                            <div class="header-top-search-result-item-info-author"><a href="{{ author.link }}">{{ author.title }}</a></div>
+                                        {% endfor %}
+                                    {% else %}
+                                        <div class="header-top-search-result-item-info-author">{{ item.authors }}</div>
+                                    {% endif %}
+                                    <div class="header-top-search-result-item-info-title">
+                                        <h4>{{ item.title }}</h4>
+                                    </div>
+                                </div>
+                                <div class="header-top-search-result-item-info col2">
+                                    <span class="header-top-search-result-item-info-count">{{ item.quantity }}x</span>
+                                </div>
+                                <div class="header-top-search-result-item-info col3">
+                                    <div>
+                                        
+                                        <span class="header-top-search-result-item-info-price">{{ item.price|raw }}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="header-top-search-result-total-price">
+        <div class="header-top-search-result-total-price-row">
+            <div class="header-top-search-result-total-price-left-col">
+                <span>Σύνολο</span>
+            </div>
+            <div class="header-top-search-result-total-price-right-col">{{ cart_total|raw }}</div>
+        </div>
+    </div>
+    <div class="header-top-search-button">
+        <a href="{{ cat_page_url }}">Δείτε το καλάθι σας</a>
+    </div>
+</div>

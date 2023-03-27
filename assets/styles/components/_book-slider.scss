@@ -1,0 +1,159 @@
+.book-slider {
+  background-color: #dedbd4;
+  margin: 0 auto;
+  max-width: $general-container-width;
+  padding: 60px 0;
+}
+
+.book-slider--border-bottom {
+  border-bottom: 2px solid $color-black;
+}
+
+.book-slider-container {
+  margin: 0 auto;
+  max-width: 1025px;
+}
+
+.book-slider-title {
+  margin-bottom: 10px;
+  text-align: center;
+
+  h2 {
+    color: $color-black-1;
+    font-size: 18px;
+    font-weight: $font-weight-semi-bold;
+    letter-spacing: 1.8px;
+    line-height: 1.556;
+  }
+
+  p {
+    color: $color-black-1;
+    font-size: 16px;
+    font-weight: $font-weight-normal;
+    letter-spacing: 2px;
+    line-height: 1.75;
+    margin-top: 3px;
+  }
+}
+
+.book-slider-wrapper {
+  margin-top: 60px;
+  position: relative;
+}
+
+.book-slider-item {
+  padding: 10px;
+}
+
+.book-slider-image {
+  align-items: flex-end;
+  display: flex;
+  height: 300px;
+
+  img {
+    box-shadow: 0 0 10px rgba($color-black, 0.6);
+    height: auto;
+    max-height: 100%;
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+.book-slider-info {
+  margin-top: 45px;
+}
+
+.book-slider-author-item {
+  a {
+    color: $color-black;
+    font-size: 14px;
+    font-weight: $font-weight-normal;
+    line-height: 1.286;
+    text-decoration: underline;
+  }
+}
+
+.book-slider-author-item+.book-slider-author-item {
+  margin-top: 8px;
+}
+
+.book-slider-product-title {
+  margin-top: 7px;
+
+  a {
+    text-decoration: none;
+  }
+
+  h3 {
+    font-size: 14px;
+    font-weight: $font-weight-extra-bold;
+    line-height: 1.286;
+  }
+}
+
+.book-slider-nav {
+  cursor: pointer;
+  position: absolute;
+  top: 140px;
+  z-index: 1;
+}
+
+.book-slider-nav--prev {
+  left: -50px;
+}
+
+.book-slider-nav--next {
+  right: -50px;
+}
+
+@media(max-width: $breakpoint-mobile-start) {
+  .book-slider {
+    padding: 30px 0;
+  }
+
+  .book-slider-container {
+    padding: 0 16px;
+  }
+
+  .book-slider-nav--prev {
+    left: 0;
+  }
+
+  .book-slider-nav--next {
+    right: 0;
+  }
+
+  .book-slider-wrapper {
+    margin-top: 30px;
+  }
+
+  .book-slider-title {
+    margin-bottom: 0;
+
+    h2 {
+      font-size: 16px;
+      letter-spacing: 1.6px;
+      line-height: 1.25;
+    }
+  }
+
+  .book-slider-info {
+    margin-top: 20px;
+  }
+
+  .book-slider-image {
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+
+    img {
+      max-width: 260px;
+    }
+  }
+}
+
+@media(max-width: 1000px) {
+  .book-slider-image {
+    height: auto;
+  }
+}

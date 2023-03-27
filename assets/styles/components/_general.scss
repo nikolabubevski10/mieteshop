@@ -1,0 +1,28 @@
+.book-product-discount {
+  border: 1px solid $color-black-1;
+  border-radius: 10px;
+  color: $color-black-1;
+  display: inline-block;
+  font-size: 12px;
+  margin-right: 8px;
+  padding: 0 5px !important;
+}
+
+/* responsive style for acf oEmbed fields in publisher and contributor single pages */
+.embed-container {
+  height: auto;
+  max-width: 100%;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+} 
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}

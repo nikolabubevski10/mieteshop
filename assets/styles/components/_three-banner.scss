@@ -1,0 +1,146 @@
+.three-banner {
+  .general-container {
+    padding: 20px 0;
+  }
+}
+
+.three-banner-row {
+  display: flex;
+}
+
+.three-banner-left-col {
+  height: 400px;
+  width: 720px;
+}
+
+.three-banner-right-col {
+  padding-left: 16px;
+  width: calc(100% - 720px);
+}
+
+.three-banner-1-slider-wrapper {
+  box-shadow: 0 0 10px rgba($color-black, 0.5);
+  position: relative;
+}
+
+.three-banner-1-slider-nav {
+  cursor: pointer;
+  position: absolute;
+  top: 150px;
+  z-index: 55;
+}
+
+.three-banner-1-slider-nav--prev {
+  left: 30px;
+}
+
+.three-banner-1-slider-nav--next {
+  right: 30px;
+}
+
+.three-banner-1 {
+  height: 400px;
+  position: relative;
+
+  img {
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+  }
+}
+
+.three-banner-1-content {
+  background-color: rgba($color-white, 0.5);
+  bottom: 0;
+  filter: drop-shadow(0 4px 4px rgba(255, 255, 255, 0.25));
+  left: 0;
+  padding: 23px 18px 19px;
+  position: absolute;
+  right: 0;
+
+  h2 {
+    font-size: 30px;
+    font-weight: $font-weight-extra-bold;
+    line-height: 1.485;
+  }
+
+  p {
+    font-size: 25px;
+    font-weight: $font-weight-normal;
+    line-height: 1.4852;
+  }
+}
+
+.three-banner-1-link {
+  margin-top: 10px;
+
+  a {
+    color: $color-black-1;
+    font-size: 14px;
+    font-weight: $font-weight-medium;
+    line-height: 1.485;
+    text-decoration: underline;
+  }
+}
+
+.three-banner-2 {
+  /* box-shadow: 0 0 10px rgba($color-black, 0.5); */
+  height: auto; /* 230px; */
+  position: relative;
+
+  img {
+    box-shadow: 0 0 10px rgba($color-black, 0.5);
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+  }
+}
+
+.three-banner-3 {
+  height: auto; /* 170px; */
+  padding-top: 12px;
+  position: relative;
+}
+
+.three-banner-3-inner {
+  /* box-shadow: 0 0 10px rgba($color-black, 0.5); */
+  height: 100%;
+
+  img {
+    box-shadow: 0 0 10px rgba($color-black, 0.5);
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+  }
+}
+
+
+@media(max-width: $breakpoint-mobile-start) {
+  .three-banner-row {
+    display: block;
+    margin: 0 -16px;
+  }
+
+  .three-banner-left-col {
+    width: 100%;
+  }
+
+  .three-banner-right-col {
+    padding-left: 0;
+    width: 100%;
+  }
+
+  .three-banner-2 {
+    margin-top: 16px;
+  }
+
+  .three-banner-1-content {
+    p {
+      font-size: 20px;
+      line-height: 1.25;
+    }
+  }
+}

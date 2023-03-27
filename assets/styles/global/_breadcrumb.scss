@@ -1,0 +1,42 @@
+.breadcrumb-section {
+  background-color: $color-gray-1;
+  margin: 0 auto;
+  max-width: $general-container-width;
+  padding: 9px 0;
+}
+
+.breadcrumb-section-white {
+  background-color: $color-white;
+}
+
+.breadcrumb-list {
+  @include clearfix();
+}
+
+.breadcrumb-item {
+  color: $color-black-1;
+  float: left;
+  font-size: 14px;
+  font-weight: $font-weight-normal;
+  letter-spacing: 0.4px;
+  padding: 3px 0;
+  position: relative;
+
+  a {
+    color: $color-black-1;
+  }
+}
+
+.breadcrumb-item+.breadcrumb-item {
+  padding-left: 35px;
+
+  &::before {
+    color: $color-black-1;
+    content: '/';
+    font-size: 14px;
+    font-weight: $font-weight-normal;
+    left: 15px;
+    position: absolute;
+    top: 4px;
+  }
+}

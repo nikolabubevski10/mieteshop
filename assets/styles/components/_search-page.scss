@@ -1,0 +1,171 @@
+.search-page-title-section {
+  background-color: #dedbd4;
+  border-bottom: 2px solid $color-black-1;
+  margin: 0 auto;
+  max-width: $general-container-width;
+  padding: 95px 0 30px;
+}
+
+.search-page-title {
+  h1 {
+    color: $color-black-1;
+    font-size: 28px;
+    font-weight: $font-weight-normal;
+    line-height: 1.143;
+  }
+
+  strong {
+    font-weight: $font-weight-extra-bold;
+  }
+}
+
+.search-page-filter-section {
+  background-color: $color-white;
+  margin: 0 auto;
+  max-width: $general-container-width;
+  padding: 40px 50px 47px;
+}
+
+.search-page-filter-list {
+  display: flex;
+  justify-content: space-around;
+}
+
+.search-page-filter-item {
+  color: $color-black;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: $font-weight-medium;
+  letter-spacing: 0.56px;
+  line-height: 1.485;
+
+  &.active {
+    font-weight: $font-weight-extra-bold;
+  }
+}
+
+.search-page-filter-options-section {
+  background-color: $color-white;
+  margin: 0 auto;
+  max-width: $general-container-width;
+  padding: 0 50px 40px;
+}
+
+.search-page-extra-filter-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.search-result-category-section {
+  .general-container {
+    border-top: 2px solid $color-black-1;
+    padding: 42px 0 120px;
+  }
+}
+
+.search-result-category-title {
+  h2 {
+    color: $color-black-1;
+    font-size: 18px;
+    font-weight: $font-weight-semi-bold;
+    letter-spacing: 1.8px;
+    line-height: 1.556;
+  }
+}
+
+.search-result-category-list {
+  margin-top: 45px;
+}
+
+.search-result-category-item {
+  a {
+    color: $color-black-1;
+    font-size: 22px;
+    font-weight: $font-weight-normal;
+    line-height: 1.091;
+  }
+
+  span {
+    display: inline-block;
+    position: relative;
+  }
+
+  span+span {
+    padding-left: 30px;
+
+    &::before {
+      color: $color-black-1;
+      content: '/';
+      font-size: 22px;
+      left: 9px;
+      line-height: 1.091;
+      position: absolute;
+      top: 1px;
+    }
+  }
+}
+
+.search-result-category-item+.search-result-category-item {
+  margin-top: 15px;
+}
+
+.search-results-section {
+  .general-container {
+    border-top: 2px solid $color-black-1;
+    padding: 60px 0 70px;
+  }
+}
+
+@media(max-width: $breakpoint-mobile-start) {
+  .search-page-title-section {
+    padding: 24px 0;
+  }
+
+  .search-page-filter-section {
+    padding: 16px;
+  }
+
+  .search-page-filter-list {
+    display: block;
+  }
+
+  .search-page-filter-options-section {
+    padding: 16px;
+  }
+
+  .search-page-extra-filter-row {
+    display: block;
+  }
+
+  .pcat-author-publisher-row {
+    display: block;
+  }
+
+  .pcat-author-publisher-col+.pcat-author-publisher-col {
+    margin: 10px 0 0;
+  }
+
+  .pcat-author-publisher-col {
+    margin-top: 10px;
+  }
+
+  .search-page-extra-filter-right {
+    margin-top: 25px;
+  }
+
+  .search-page-filter-item+.search-page-filter-item {
+    margin-top: 10px;
+  }
+
+  .search-result-category-item {
+    a {
+      font-size: 16px;
+    }
+
+    span+span {
+      &::before {
+        font-size: 16px;
+      }
+    }
+  }
+}

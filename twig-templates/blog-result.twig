@@ -1,0 +1,47 @@
+{% for blog in blog_list %}
+    <div class="blog-result-col">
+        <div class="home-blog-item">
+            <div class="home-blog-item-image">
+                <a href="{{ blog.url }}">
+                    <img
+                        class="lazyload"
+                        src="{{ blog.placeholder }}"
+                        data-src="{{ blog.image_url }}"
+                        alt="{{ blog.title }}">
+                </a>
+            </div>
+            <div class="home-blog-item-meta-row">
+                <div class="home-blog-item-category-list">
+                    {% for term in blog.term_list %}
+                        <div class="home-blog-item-category-col"><a href="{{ term.url }}">{{ term.name }}</a></div>
+                    {% endfor %}
+                </div>
+                <div class="home-blog-item-date">{{ blog.date }}</div>
+            </div>
+            <div class="home-blog-item-title">
+                <h3><a href="{{ blog.url }}">{{ blog.title }}</a></h3>
+            </div>
+            <div class="blog-item-bottom-row">
+                {% if blog.event_from_date %}
+                    <div class="blog-item-bottom-left-col">
+                        <div class="home-blog-item-duration-row">
+                            <div class="home-blog-item-duration-col">
+                                <div class="home-blog-item-duration-label">ΑΠΟ</div>
+                                <div class="home-blog-item-duration-date">{{ blog.event_from_date }}</div>
+                            </div>
+                            <div class="home-blog-item-duration-col">
+                                <div class="home-blog-item-duration-label">ΕΩΣ</div>
+                                <div class="home-blog-item-duration-date">{{ blog.event_to_date }}</div>
+                            </div>
+                        </div>
+                    </div>
+                {% endif %}
+                <div class="blog-item-bottom-right-col">
+                    <div class="home-blog-item-excerpt">
+                        {{ blog.post_lead }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endfor %}

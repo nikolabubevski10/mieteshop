@@ -1,0 +1,148 @@
+.home-offers-section {
+  background-color: $color-black-1;
+  margin: 0 auto;
+  max-width: $general-container-width;
+  padding: 60px 0 40px;
+}
+
+.home-offers-title {
+  text-align: center;
+
+  h2 {
+    color: $color-white;
+    font-size: 18px;
+    font-weight: $font-weight-semi-bold;
+    letter-spacing: 1.8px;
+  }
+}
+
+.home-offers-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding: 0 15px;
+}
+
+.home-offers-col {
+  width: 180px;
+}
+
+.home-offers-image {
+  align-items: flex-end;
+  display: flex;
+  height: 300px;
+
+  img {
+    height: auto;
+    max-height: 100%;
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+.home-offers-info {
+  margin-top: 80px;
+}
+
+.home-offers-author-item {
+  color: $color-white;
+  font-size: 14px;
+  font-weight: $font-weight-normal;
+  line-height: 1.286;
+    
+  a {
+    color: $color-white;
+    text-decoration: underline;
+  }
+}
+
+.home-offers-author-item+.home-offers-author-item {
+  margin-top: 6px;
+}
+
+.home-offers-product-title {
+  margin-top: 7px;
+
+  h3 {
+    color: $color-white;
+    font-size: 14px;
+    font-weight: $font-weight-extra-bold;
+    line-height: 1.286;
+  }
+}
+
+.home-offers-link {
+  margin-top: 20px;
+  text-align: right;
+
+  a {
+    color: $color-white;
+    font-size: 16px;
+    font-weight: $font-weight-normal;
+    text-decoration: underline;
+  }
+}
+
+.home-offers-mobile-slider {
+  display: none;
+  position: relative;
+}
+
+.home-offers-mobile-slider-nav {
+  cursor: pointer;
+  position: absolute;
+  top: 140px;
+  z-index: 1;
+}
+
+.home-offers-mobile-slider-nav--prev {
+  left: 0;
+}
+
+.home-offers-mobile-slider-nav--next {
+  right: 0;
+}
+
+@media(max-width: $breakpoint-mobile-start) {
+  .home-offers-row {
+    display: none;
+  }
+
+  .home-offers-mobile-slider {
+    display: block;
+    padding-top: 40px;
+  }
+
+  .home-offers-title {
+    h2 {
+      font-size: 16px;
+      letter-spacing: 1.6px;
+      line-height: 1.25;
+    }
+  }
+
+  .home-offers-col {
+    padding: 10px;
+    width: 100%;
+  }
+
+  .home-offers-info {
+    margin-top: 7px;
+  }
+
+  .home-offers-image {
+    align-items: flex-end;
+    display: flex;
+    height: 300px;
+    justify-content: center;
+    width: 100%;
+  
+    img {
+      box-shadow: 0 0 10px rgba($color-black, 0.5);
+      height: auto;
+      max-height: 100%;
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+}

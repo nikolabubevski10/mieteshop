@@ -1,0 +1,39 @@
+.middle-banner {
+  background: #dedbd4;
+  margin: 0 auto;
+  max-width: $general-container-width;
+  padding: 16px 0;
+}
+
+.middle-banner-row {
+  display: flex;
+  margin: 0 -8px;
+}
+
+.middle-banner-col {
+  padding: 0 8px;
+  width: 50%;
+}
+
+.middle-banner-image {
+  img {
+    box-shadow: 0 0 10px rgba($color-black, 0.5);
+    width: 100%;
+  }
+}
+
+@media(max-width: $breakpoint-mobile-start) {
+  .middle-banner {
+    padding: 0;
+  }
+
+  .middle-banner-row {
+    display: block;
+    margin: 0 -16px;
+  }
+
+  .middle-banner-col {
+    padding: 0;
+    width: 100%;
+  }
+}
